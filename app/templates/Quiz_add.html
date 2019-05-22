@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <title> Add a new Question</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <script src="../static/js/jquery.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+</head>
+
+<body onload="res()" style="display:flex; justify-content: center;">
+    <div class="container col-lg-7">
+        <h1>Add a new Question:</h1>
+        <form class="form-horizontal" name="add_ques" action="" method="POST" id="add_ques">
+            <div class="form-group">
+                <div class="col-sm-5">
+                    <label for="Question"><b>Question:</b></label>
+                    <input type="text" class="form-control" name="Question" id="Question"
+                        placeholder="Enter the Question" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-5">
+                    <label for="Option1"><b>Option 0:</b></label>
+                    <input type="text" class="form-control" name="Option1" id="Option1" placeholder="Enter the Option 0"
+                        required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-5">
+                    <label for="Option2"><b>Option 1:</b></label>
+                    <input type="text" class="form-control" name="Option2" id="Option2" placeholder="Enter the Option 1"
+                        required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-5">
+                    <label for="Option3"><b>Option 2:</b></label>
+                    <input type="text" class="form-control" name="Option3" id="Option3" placeholder="Enter the Option 2"
+                        required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-5">
+                    <label for="Option4"><b>Option 3:</b></label>
+                    <input type="text" class="form-control" name="Option4" id="Option4" placeholder="Enter the Option 3"
+                        required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-5">
+                    <label for="Answer"><b>Answer:</b></label>
+                    <input type="number" class="form-control" name="Answer" id="Answer" placeholder="Enter the Answer"
+                        max="3" min="0" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-5">
+                    <label for="Language"><b>Language:</b></label>
+                    <select class="form-control" name="Language" id="Language" required>
+                        <option value="">Select Language</option>
+                        <option value="English">English</option>
+                        <option value="Hindi">Hindi</option>
+                    </select>
+                </div>
+            </div>
+            <input type="submit" class="btn btn-default" value="Submit">
+        </form>
+    </div>
+    <div class="container col-lg-5">
+        <div class="row container-fluid">
+            <h1>OR...</h1>
+            <h2>Enter ID of the Question to delete:</h2>
+            <form class="form-horizontal" name="del_ques" action="" method="GET" id="del_ques">
+                <div class="form-group">
+                    <div class="col-sm-5">
+                        <label for="ID"><b>ID to delete:</b></label>
+                        <input type="number" class="form-control" name="ID" id="ID"
+                            placeholder="Enter the ID of the Question" min="0" required>
+                    </div>
+                </div>
+                <input type="submit" class="btn btn-default" value="Delete">
+            </form>
+        </div>
+        <div class="row container-fluid">
+            <h1>OR...</h1>
+            <h2>Click <a href="http://0.0.0.0:5000/questions" target="blank">here</a> to view all questions!</h2>
+        </div>
+    </div>
+</body>
+<script src="../static/js/Quiz_add.js"></script>
+
+</html>
